@@ -6,7 +6,8 @@ import {
   VolumeX, 
   Sun, 
   Moon,
-  Home
+  Home,
+  GraduationCap
 } from 'lucide-react';
 import ModeSelectorMenu from './ModeSelectorMenu';
 import { sounds } from '../utils/soundEffects';
@@ -42,7 +43,10 @@ export default function Navbar({
           </div>
           <div>
             <h1 className="brand-title-text">مكتب المحاسب التفاعلي</h1>
-            <span className="block text-xs text-secondary font-medium">Interactive Accounting Lab</span>
+            <span className="flex items-center gap-1.5 text-xs text-amber-300 font-bold">
+              <GraduationCap size={13} className="text-amber-400" />
+              <span>إعداد وتطوير: Dr. Hassan Hassani | مخصص لـ: د. أحمد رزق</span>
+            </span>
           </div>
         </div>
       </div>

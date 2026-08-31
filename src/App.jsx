@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import LandingPage from './components/LandingPage';
 import UserGuideModal from './components/UserGuideModal';
 import Navbar from './components/Navbar';
+import Watermark from './components/Watermark';
 import AccountingEquationBar from './components/AccountingEquationBar';
 import CompanyDashboard from './components/CompanyDashboard';
 import JournalBuilder from './components/JournalBuilder';
@@ -83,7 +84,10 @@ export default function App() {
   const trialBalance = engine.getTrialBalance();
 
   return (
-    <div className={`min-h-screen ${theme === 'light' ? 'bg-slate-100 text-slate-900' : 'bg-slate-950 text-slate-100'}`}>
+    <div className={`min-h-screen ${theme === 'light' ? 'bg-slate-100 text-slate-900' : 'bg-slate-950 text-slate-100'} relative`}>
+      {/* Floating Watermark for Dr. Ahmed Rizk */}
+      <Watermark />
+
       {currentView === 'landing' ? (
         <LandingPage
           onEnterLab={() => setCurrentView('lab')}
